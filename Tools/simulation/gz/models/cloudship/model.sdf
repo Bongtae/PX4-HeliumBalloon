@@ -4,7 +4,7 @@
     <self_collide>false</self_collide>
     <static>false</static>
     <link name="hull">
-      <pose>-0.1299999999999999 0 3.1 0 0 0</pose>
+      <pose>-0.1299999999999999 0 2 0 0 0</pose>
       <inertial>
         <pose>0.023862743087597126 0 -0.4953798831128884 0 0 0</pose>
         <mass>7.314749999999999</mass>
