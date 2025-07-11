@@ -7,5 +7,8 @@
 
 set VEHICLE_TYPE airship
 
+# Start gz_sensor_bridge
+sim_gz_sensor_bridge start
+
 # MAV_TYPE_AIRSHIP 7
 param set-default MAV_TYPE 7

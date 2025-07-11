@@ -16,6 +16,7 @@ param set-default SENS_EN_MAGSIM 1
 param set-default SENS_EN_ARSPDSIM 1
 
 param set-default CA_ROTOR_COUNT 3
+
 param set-default CA_ROTOR0_AX 1
 param set-default CA_ROTOR0_AZ 0
 param set-default CA_ROTOR0_KM 0
