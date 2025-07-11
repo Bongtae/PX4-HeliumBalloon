@@ -4,8 +4,6 @@ This repository is made for PX4-HeliumBalloon project.
 
 This repository holds the [PX4](http://px4.io) flight control solution for drones, with the main applications located in the [src/modules](https://github.com/PX4/PX4-Autopilot/tree/main/src/modules) directory. It also contains the PX4 Drone Middleware Platform, which provides drivers and middleware to run drones.
 
-For convenience, PX4-gazebo-models repository has been removed from submodule of this project, and uploaded static version of that repository.
-
 ## Getting Started
 
 ### Notice
@@ -56,6 +54,12 @@ PX4_SYS_AUTOSTART=4001 PX4_SIM_MODEL=x500 ./build/px4_sitl_default/bin/px4
 ```
 
 ## Troubleshooting
+
+When you got **AttributeError: module 'em' has no attribute 'RAW_OPT'** error message during build px4, you should install empy with v3.3.4.
+
+```
+pip install empy=3.3.4
+```
 
 If you changed airframe config file under init.d-posix/airframe, you should reset repository by **make distclean** and **submodule update**.
 
