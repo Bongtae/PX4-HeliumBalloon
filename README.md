@@ -16,11 +16,11 @@ You need the following development environment:
 
 This project is based on following environment:
 
-**PX4 release/1.15**
+**PX4-AutoPilot release/1.15**
 
 **Gazebo Simulator ("Harmonic")**
 
-For those who don't have these development environment requirement, execute the following codes:
+### Installing
 
 1. Download PX4 Source code:
 ```
@@ -37,7 +37,7 @@ bash ./PX4-HeliumBalloon/Tools/setup/ubuntu.sh
 For more information, follow the link below:
 [PX4 Ubuntu Development Environment Setup](https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html)
 
-### Installing
+### Run SITL Simulation
 
 Build px4_sitl_default under ./PX4-HeliumBalloon folder.
 
@@ -48,7 +48,7 @@ make px4_sitl_default
 Run gz_x500 multicopter model for test.
 
 ```
-PX4_SYS_AUTOSTART=4001 PX4_SIM_MODEL=x500 ./build/px4_sitl_default/bin/px4/
+PX4_SYS_AUTOSTART=4001 PX4_SIM_MODEL=x500 ./build/px4_sitl_default/bin/px4
 ```
 
 ### Troubleshooting
