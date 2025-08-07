@@ -14,8 +14,6 @@ You need the following development environment:
 
 **Ubuntu 24.04.2 LTS(noble)**
 
-This project is based on following environment:
-
 **PX4-AutoPilot**(forked from main, customed)
 
 **Gazebo Simulator ("Harmonic")**
@@ -50,6 +48,14 @@ Run gz_x500 multicopter model for test.
 ```
 PX4_SYS_AUTOSTART=4001 PX4_SIM_MODEL=x500 ./build/px4_sitl_default/bin/px4
 ```
+
+Run custom model for PX4 SITL. For example, run
+
+```
+PX4_SYS_AUTOSTART=4500 ./build/px4_sitl_default/bin/px4
+```
+
+for test hb_1 model.
 
 ## Troubleshooting
 
