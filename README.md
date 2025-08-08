@@ -14,9 +14,11 @@ You need the following development environment:
 
 **Ubuntu 24.04.2 LTS(noble)**
 
-**PX4-AutoPilot**(forked from main, customed)
-
 **Gazebo Simulator ("Harmonic")**
+
+This project is forked from PX4-AutoPilot @ 572a06b.
+
+**PX4-AutoPilot**(forked from main, customed)
 
 ### Installing
 
