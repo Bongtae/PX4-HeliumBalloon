@@ -16,9 +16,7 @@ You need the following development environment:
 
 **Gazebo Simulator ("Harmonic")**
 
-This project is forked from PX4-AutoPilot @ 572a06b.
-
-**PX4-AutoPilot**(forked from main, customed)
+This project is forked from **PX4-AutoPilot @ 572a06b**.
 
 ### Installing
 
