@@ -1,35 +1,35 @@
 #!/bin/sh
 #
-# @name Gazebo x500
+# @name hb_2
 #
-# @type Quadrotor
+# @type Quadrotor with balloon
 #
 
 . ${R}etc/init.d/rc.mc_defaults
 
 PX4_SIMULATOR=${PX4_SIMULATOR:=gz}
 PX4_GZ_WORLD=${PX4_GZ_WORLD:=default}
-PX4_SIM_MODEL=${PX4_SIM_MODEL:=x500}
+PX4_SIM_MODEL=${PX4_SIM_MODEL:=hb_2}
 
 param set-default SIM_GZ_EN 1
 
 param set-default CA_AIRFRAME 0
 param set-default CA_ROTOR_COUNT 4
 
-param set-default CA_ROTOR0_PX 0.13
-param set-default CA_ROTOR0_PY 0.22
+param set-default CA_ROTOR0_PX 1.439
+param set-default CA_ROTOR0_PY 1.439
 param set-default CA_ROTOR0_KM  0.05
 
-param set-default CA_ROTOR1_PX -0.13
-param set-default CA_ROTOR1_PY -0.20
+param set-default CA_ROTOR1_PX -1.439
+param set-default CA_ROTOR1_PY -1.439
 param set-default CA_ROTOR1_KM  0.05
 
-param set-default CA_ROTOR2_PX 0.13
-param set-default CA_ROTOR2_PY -0.22
+param set-default CA_ROTOR2_PX 1.439
+param set-default CA_ROTOR2_PY -1.439
 param set-default CA_ROTOR2_KM -0.05
 
-param set-default CA_ROTOR3_PX -0.13
-param set-default CA_ROTOR3_PY 0.20
+param set-default CA_ROTOR3_PX -1.439
+param set-default CA_ROTOR3_PY 1.439
 param set-default CA_ROTOR3_KM -0.05
 
 param set-default SIM_GZ_EC_FUNC1 101

@@ -96,8 +96,6 @@ px4_add_romfs_files(
 
 	4600_gz_custom_airship
 
-	4600_gz_cloudship
-
 	6011_gazebo-classic_typhoon_h480
 	6011_gazebo-classic_typhoon_h480.post
 
