@@ -60,9 +60,10 @@
     </spherical_coordinates>
 
     <!-- 부력/바람 -->
-    <plugin filename="gz-sim8-buoyancy-system" name="gz::sim::systems::Buoyancy">
-      <uniform_fluid_density>1.225</uniform_fluid_density> <!-- 해수면 표준 공기 -->
-      <!-- (선택) 특정 대상만: <enable>custom_airship::hull</enable> -->
-    </plugin>
+    <!-- <plugin filename="gz-sim8-buoyancy-system" name="gz::sim::systems::Buoyancy">
+      <uniform_fluid_density>1.225</uniform_fluid_density>
+      <enable>hb_1::base_link</enable>
+    </plugin> -->
+
   </world>
 </sdf>

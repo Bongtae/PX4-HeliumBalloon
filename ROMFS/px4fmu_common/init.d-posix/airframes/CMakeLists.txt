@@ -91,8 +91,12 @@ px4_add_romfs_files(
 	4020_gz_tiltrotor
 	4021_gz_x500_flow
 
-	4500_gz_hb_1
-	4501_gz_custom_airship
+	4501_gz_hb_1
+	4502_gz_hb_2
+
+	4600_gz_custom_airship
+
+	4600_gz_cloudship
 
 	6011_gazebo-classic_typhoon_h480
 	6011_gazebo-classic_typhoon_h480.post

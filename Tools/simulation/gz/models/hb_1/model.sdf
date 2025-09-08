@@ -16,7 +16,7 @@
           <izz>0.1477</izz>
         </inertia>
       </inertial>
-      <collision name='body_collision'>
+      <collision name='body_link_collision'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <box>
