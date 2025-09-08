@@ -57,6 +57,12 @@ PX4_SYS_AUTOSTART=4500 ./build/px4_sitl_default/bin/px4
 
 for test hb_1 model.
 
+For test with custom world, run
+
+```
+PX4_GZ_WORLD=airship_world PX4_SYS_AUTOSTART=4500 PX4_SIM_MODEL=gz_hb_1 ./build/px4_sitl_default/bin/px4
+```
+
 ## Troubleshooting
 
 If you changed airframe config file under init.d-posix/airframe, you should reset repository by **make distclean** and **submodule update**.

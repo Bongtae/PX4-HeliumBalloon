@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml version="1.0" ?>
+<sdf version="1.10">
+  <model name="custom_airship">
+    <static>false</static>
+
+    <!-- 선체(부력 대상) -->
+    <link name="hull">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <!-- 기존 값으로 교체 -->
+        <mass>10.0</mass>
+        <inertia>
+          <ixx>5</ixx><iyy>5</iyy><izz>5</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <collision name="hull_collision">
+        <geometry>
+          <!-- 기존 메시/지오메트리로 교체 (부력 계산에 collision 필수) -->
+          <sphere><radius>2.0</radius></sphere>
+        </geometry>
+      </collision>
+      <visual name="hull_visual">
+        <geometry><sphere><radius>2.0</radius></sphere></geometry>
+      </visual>
+
+      <!-- Sensors (PX4 gz_bridge가 구독하는 토픽으로 발행) -->
+      <sensor name="imu_sensor" type="imu">
+        <always_on>true</always_on>
+        <update_rate>250</update_rate>
+        <topic>imu</topic>
+      </sensor>
+
+      <sensor name="mag_sensor" type="magnetometer">
+        <always_on>true</always_on>
+        <update_rate>100</update_rate>
+        <topic>magnetometer</topic>
+      </sensor>
+
+      <sensor name="baro_sensor" type="air_pressure">
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <topic>air_pressure</topic>
+      </sensor>
+
+      <sensor name="gps_sensor" type="navsat">
+        <always_on>true</always_on>
+        <update_rate>10</update_rate>
+        <topic>navsat</topic>
+      </sensor>
+    </link>
+
+    <!-- (선택) 꼬리날개/조종면: 각 링크에 추가하고 LiftDrag 플러그인 부착 -->
+    <!--
+    <link name="tail_fin">
+      ...
+    </link>
+    -->
+
+    <!-- (선택) 쓰러스터: SpacecraftThrusterModel 또는 ApplyLinkWrench로 구현 -->
+    <!--
+    <plugin filename="gz-sim-spacecraft-thruster-model-system"
+            name="gz::sim::systems::SpacecraftThrusterModel">
+      <link_name>hull</link_name>
+      <thruster>
+        <name>fwd_thruster</name>
+        <pose>0 0 0 0 0 0</pose>
+        <direction>1 0 0</direction>
+        <max_force>30</max_force>
+        <command_topic>cmd_fwd_thrust</command_topic>
+      </thruster>
+    </plugin>
+    -->
+
+    <!-- 선체 공기역학(LTA) : 계수는 문헌/실측에 맞춰 튜닝 -->
+    <plugin filename="gz-sim8-lighter_than_air_dynamics-system"
+      name="gz::sim::systems::LighterThanAirDynamics">
+      <link_name>hull</link_name>
+      <air_density>1.225</air_density>
+      <!-- 아래 계수들은 자리표시자입니다. 모델에 맞춰 조정 -->
+      <force_inviscid_coeff>0.0 0.0 0.0</force_inviscid_coeff>
+      <force_viscous_coeff>0.0 0.0 0.0</force_viscous_coeff>
+      <moment_inviscid_coeff>0.0 0.0 0.0</moment_inviscid_coeff>
+      <moment_viscous_coeff>0.0 0.0 0.0</moment_viscous_coeff>
+      <eps_v>0.001</eps_v>
+      <axial_drag_coeff>0.2</axial_drag_coeff>
+    </plugin>
+
+    <!-- (선택) 조종면 Lift/Drag (각 조종면 링크에 부착)
+    <plugin filename="gz-sim-lift-drag-system"
+            name="gz::sim::systems::LiftDrag">
+      <link_name>tail_fin</link_name>
+      <cla>5.7</cla>
+      <cda>0.01</cda>
+      <alpha_stall>0.35</alpha_stall>
+      ...
+    </plugin>
+    -->
+
+  </model>
+</sdf>

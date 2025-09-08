@@ -92,6 +92,7 @@ px4_add_romfs_files(
 	4021_gz_x500_flow
 
 	4500_gz_hb_1
+	4501_gz_custom_airship
 
 	6011_gazebo-classic_typhoon_h480
 	6011_gazebo-classic_typhoon_h480.post
