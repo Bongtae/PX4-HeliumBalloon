@@ -52,15 +52,15 @@ PX4_SYS_AUTOSTART=4001 PX4_SIM_MODEL=x500 ./build/px4_sitl_default/bin/px4
 Run custom model for PX4 SITL. For example, run
 
 ```
-PX4_SYS_AUTOSTART=4500 ./build/px4_sitl_default/bin/px4
+PX4_SYS_AUTOSTART=4502 PX4_SIM_MODEL=hb_2 ./build/px4_sitl_default/bin/px4
 ```
 
-for test hb_1 model.
+for test hb_2 model.
 
 For test with custom world, run
 
 ```
-PX4_GZ_WORLD=airship_world PX4_SYS_AUTOSTART=4500 PX4_SIM_MODEL=gz_hb_1 ./build/px4_sitl_default/bin/px4
+PX4_GZ_WORLD=airship_world PX4_SYS_AUTOSTART=4502 PX4_SIM_MODEL=hb_2 ./build/px4_sitl_default/bin/px4
 ```
 
 ## Troubleshooting
