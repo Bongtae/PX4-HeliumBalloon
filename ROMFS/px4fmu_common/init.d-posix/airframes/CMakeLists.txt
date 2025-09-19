@@ -93,6 +93,7 @@ px4_add_romfs_files(
 
 	4501_gz_hb_1
 	4502_gz_hb_2
+	4503_gz_hb_3
 
 	4600_gz_custom_airship
 

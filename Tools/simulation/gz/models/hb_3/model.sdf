@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdf version='1.9'>
-  <model name='hb_2'>
-    <pose>0 0 2 0 0 0</pose>
+  <model name='hb_3'>
+    <pose>0 0 0.7 0 0 0</pose>
     <self_collide>false</self_collide>
     <static>false</static>
     <link name="base_link">
@@ -23,7 +23,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/body.dae</uri>
+            <uri>model://hb_3/meshes/body.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -34,11 +34,11 @@
         </material>
       </visual>
       <visual name="base_stand">
-        <pose>0 0 -1.75 0 0 0</pose>
+        <pose>0 0 -0.45 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/stand.dae</uri>
+            <uri>model://hb_3/meshes/stand.dae</uri>
           </mesh>
         </geometry>
         <material>
@@ -48,175 +48,47 @@
           <roughness>0.6</roughness>
         </material>
       </visual>
-      <visual name="motor_arm_0">
-        <pose> 1.061 1.061 0 0 0 0.785</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/motor_arm.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.08 0.08 0.08 1</ambient>
-          <diffuse>0.08 0.08 0.08 1</diffuse>
-          <specular>0.02 0.02 0.02 1</specular>
-          <emissive>0 0 0 1</emissive>
-          <roughness>0.8</roughness>
-        </material>
-      </visual>
-      <visual name="motor_arm_1">
-        <pose> -1.061 1.061 0 0 0 2.356</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/motor_arm.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.08 0.08 0.08 1</ambient>
-          <diffuse>0.08 0.08 0.08 1</diffuse>
-          <specular>0.02 0.02 0.02 1</specular>
-          <emissive>0 0 0 1</emissive>
-          <roughness>0.8</roughness>
-        </material>
-      </visual>
-      <visual name="motor_arm_2">
-        <pose> 1.061 -1.061 0 0 0 -0.785</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/motor_arm.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.08 0.08 0.08 1</ambient>
-          <diffuse>0.08 0.08 0.08 1</diffuse>
-          <specular>0.02 0.02 0.02 1</specular>
-          <emissive>0 0 0 1</emissive>
-          <roughness>0.8</roughness>
-        </material>
-      </visual>
-      <visual name="motor_arm_3">
-        <pose> -1.061 -1.061 0 0 0 -2.356</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/motor_arm.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.08 0.08 0.08 1</ambient>
-          <diffuse>0.08 0.08 0.08 1</diffuse>
-          <specular>0.02 0.02 0.02 1</specular>
-          <emissive>0 0 0 1</emissive>
-          <roughness>0.8</roughness>
-        </material>
-      </visual>
-      <visual name="blade_guard_0">
-        <pose>1.439 1.439 .020 0 0 -.45</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/blade_guard.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.20 0.20 0.20 1</ambient>
-          <diffuse>0.08 0.08 0.08 1</diffuse>
-          <specular>0.02 0.02 0.02 1</specular>
-          <emissive>0 0 0 1</emissive>
-          <roughness>0.8</roughness>
-        </material>
-      </visual>
-      <visual name="blade_guard_1">
-        <pose>-1.439 1.439 .020 0 0 -.45</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/blade_guard.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.20 0.20 0.20 1</ambient>
-          <diffuse>0.08 0.08 0.08 1</diffuse>
-          <specular>0.02 0.02 0.02 1</specular>
-          <emissive>0 0 0 1</emissive>
-          <roughness>0.8</roughness>
-        </material>
-      </visual>
-      <visual name="blade_guard_2">
-        <pose>1.439 -1.439 .020 0 0 -.45</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/blade_guard.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.20 0.20 0.20 1</ambient>
-          <diffuse>0.08 0.08 0.08 1</diffuse>
-          <specular>0.02 0.02 0.02 1</specular>
-          <emissive>0 0 0 1</emissive>
-          <roughness>0.8</roughness>
-        </material>
-      </visual>
-      <visual name="blade_guard_3">
-        <pose>-1.439 -1.439 .020 0 0 -.45</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/blade_guard.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.20 0.20 0.20 1</ambient>
-          <diffuse>0.08 0.08 0.08 1</diffuse>
-          <specular>0.02 0.02 0.02 1</specular>
-          <emissive>0 0 0 1</emissive>
-          <roughness>0.8</roughness>
-        </material>
-      </visual>
       <visual name="5010_motor_base_0">
-        <pose>1.439 1.439 .030 0 0 -.45</pose>
+        <pose>0.45 0.45 .010 0 0 -.45</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/5010Base.dae</uri>
+            <uri>model://hb_3/meshes/5010Base.dae</uri>
           </mesh>
         </geometry>
       </visual>
       <visual name="5010_motor_base_1">
-        <pose>-1.439 1.439 .030 0 0 -.45</pose>
+        <pose>-0.45 0.45 .010 0 0 -.45</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/5010Base.dae</uri>
+            <uri>model://hb_3/meshes/5010Base.dae</uri>
           </mesh>
         </geometry>
       </visual>
       <visual name="5010_motor_base_2">
-        <pose>1.439 -1.439 .030 0 0 -.45</pose>
+        <pose>0.45 -0.45 .010 0 0 -.45</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/5010Base.dae</uri>
+            <uri>model://hb_3/meshes/5010Base.dae</uri>
           </mesh>
         </geometry>
       </visual>
       <visual name="5010_motor_base_3">
-        <pose>-1.439 -1.439 .030 0 0 -.45</pose>
+        <pose>-0.45 -0.45 .010 0 0 -.45</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/5010Base.dae</uri>
+            <uri>model://hb_3/meshes/5010Base.dae</uri>
           </mesh>
         </geometry>
       </visual>
       <collision name="base_link_collision_0">
-        <pose>0 0 -1.75 0 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.870 0.500 0.287</size>
+            <size>2 2 0.4</size>
           </box>
         </geometry>
         <surface>
@@ -232,11 +104,11 @@
         </surface>
       </collision>
       <collision name="base_link_collision_1">
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 -0.45 0 0 0</pose>
         <geometry>
-          <sphere>
-            <radius>1.5</radius>
-          </sphere>
+          <box>
+            <size>0.870 0.500 0.287</size>
+          </box>
         </geometry>
         <surface>
           <contact>
@@ -348,7 +220,7 @@
       <gravity>true</gravity>
       <self_collide>false</self_collide>
       <velocity_decay/>
-      <pose>1.439 -1.439 0.058 0 0 0</pose>
+      <pose>0.45 0.45 0.038 0 0 0</pose>
       <inertial>
         <mass>0.016076923076923075</mass>
         <inertia>
@@ -362,7 +234,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/1345_prop_ccw.stl</uri>
+            <uri>model://hb_3/meshes/1345_prop_ccw.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -377,7 +249,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/5010Bell.dae</uri>
+            <uri>model://hb_3/meshes/5010Bell.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -420,7 +292,7 @@
       <gravity>true</gravity>
       <self_collide>false</self_collide>
       <velocity_decay/>
-      <pose>-1.439 1.439 0.058 0 0 0</pose>
+      <pose>-0.45 0.45 0.038 0 0 0</pose>
       <inertial>
         <mass>0.016076923076923075</mass>
         <inertia>
@@ -434,7 +306,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/1345_prop_ccw.stl</uri>
+            <uri>model://hb_3/meshes/1345_prop_ccw.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -449,7 +321,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/5010Bell.dae</uri>
+            <uri>model://hb_3/meshes/5010Bell.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -492,7 +364,7 @@
       <gravity>true</gravity>
       <self_collide>false</self_collide>
       <velocity_decay/>
-      <pose>1.439 1.439 0.058 0 0 0</pose>
+      <pose>0.45 -0.45 0.038 0 0 0</pose>
       <inertial>
         <mass>0.016076923076923075</mass>
         <inertia>
@@ -506,7 +378,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/1345_prop_cw.stl</uri>
+            <uri>model://hb_3/meshes/1345_prop_cw.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -521,7 +393,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/5010Bell.dae</uri>
+            <uri>model://hb_3/meshes/5010Bell.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -564,7 +436,7 @@
       <gravity>true</gravity>
       <self_collide>false</self_collide>
       <velocity_decay/>
-      <pose>-1.439 -1.439 0.058 0 0 0</pose>
+      <pose>-0.45 -0.45 0.038 0 0 0</pose>
       <inertial>
         <mass>0.016076923076923075</mass>
         <inertia>
@@ -578,7 +450,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/1345_prop_cw.stl</uri>
+            <uri>model://hb_3/meshes/1345_prop_cw.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -593,7 +465,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hb_2/meshes/5010Bell.dae</uri>
+            <uri>model://hb_3/meshes/5010Bell.dae</uri>
           </mesh>
         </geometry>
       </visual>
